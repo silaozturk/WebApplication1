@@ -1,0 +1,26 @@
+﻿<br/>
+<h2>Tren Rezervasyon</h2>
+@using (Html.BeginForm("Tren", "Home", FormMethod.Post))
+{
+    <br/><br/>
+<div class="form-group">
+    @Html.Label("Kişi Sayısı")
+    @Html.TextBox("KisiSayisi")
+    <br /><br />
+    @Html.Label("Kisiler Farklı Vagonlara Yerlestirilsin mi?")
+    @Html.CheckBox("FarkliVagon")
+    <br /><br />
+    @Html.Label("Vagon Bilgileri (Vagon İd,Kapasite,Dolu Koltuk Sayısı;id2,id2kapasite,id2 dolu koltuk sayısı ) (örn= 1,50,45;2,60,35)")
+    <br />
+    @Html.TextBox("VagonBilgileri")
+    <br /><br />
+    <button>Kaydet</button>
+</div>}
+
+@{ if (ViewBag.Items != null)
+    {
+
+    <div>
+        @ViewBag.Items
+    </div> }
+    }
